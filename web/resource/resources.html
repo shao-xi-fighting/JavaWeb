@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/resource/resources.css">
+</head>
+<body>
+    <nav class="resources-nav">
+        <ul class="resources-items">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>VUE.JS</li>
+        </ul>
+    </nav>
+    <main class="items-content">
+        <ul class="itemsUL">
+            <li class="items-display" style="display: block;">
+                <aside class="HTML-SIDE">
+                    <ul>
+                        <li>HTML基础教程</li>
+                        <li>HTMLXHTML</li>
+                        <li>HTML表单</li>
+                        <li>HTML画布</li>
+                        <li>HTML媒体</li>
+                        <li>HTML5</li>
+                        <li>HTML API</li>
+                        <li>HTML参考手册</li>
+                    </ul>
+                </aside>
+                <main class="HTML-MAIN">
+                    <ul>
+                        <li>htmljichu</li>
+                        <li>html内容2</li>
+                        <li>html内容3</li>
+                        <li>html内容4</li>
+                        <li>html内容5</li>
+                        <li>html内容6</li>
+                        <li>html内容8</li>
+                        <li>dsf</li>
+                    </ul>
+                </main>
+            </li>
+            <li>
+                <aside class="CSS-SIDE">
+                    <ul>
+                        <li>CSS基础教程</li>
+                        <li>CSS中级教程</li>
+                        <li>CSS3高级教程</li>
+                        <li>CSS响应式设计</li>
+                        <li>CSS网格教程</li>
+                        <li>CSS实例</li>
+                        <li>CSS实例</li>
+                        <li>CSS参考手册</li>
+                    </ul>
+                </aside>
+                <main class="CSS-MAIN">
+                    <ul>
+                        <li>内容基础教程</li>
+                        <li>内容中级教程</li>
+                        <li>内容3高级教程</li>
+                        <li>内容响应式设计</li>
+                        <li>内容网格教程</li>
+                        <li>内容实例</li>
+                        <li>内容实例</li>
+                        <li>内容参考手册</li>
+                    </ul>
+                </main>
+            </li>
+            <li>
+                <aside class="JS-SIDE">
+                    <ul>
+                        <li>JS基础语法</li>
+                        <li>JS表单</li>
+                        <li>JS对象</li>
+                        <li>JS函数</li>
+                        <li>JS HTML DOM</li>
+                        <li>JS Browser BOW</li>
+                        <li>JS AJAX</li>
+                        <li>JS JSON</li>
+                        <li>JS实例</li>
+                        <li>JS参考手册</li>
+                    </ul>
+                </aside>
+                <main class="JS-MAIN">
+                    <ul>
+                        <li>JS内容基础语法</li>
+                        <li>JS内容表单</li>
+                        <li>JS内容对象</li>
+                        <li>JS内容函数</li>
+                        <li>JS内容 HTML DOM</li>
+                        <li>JS内容 Browser BOW</li>
+                        <li>JS内容 AJAX</li>
+                        <li>JS内容 JSON</li>
+                        <li>JS内容实例</li>
+                        <li>JS内容参考手册</li>
+                    </ul>
+                </main>
+            </li>
+            <li>
+                <aside class="VUE-SIDE">
+                    <ul>
+                        <li>Vue.js基础语法</li>
+                        <li>深入了解组件</li>
+                        <li>过渡&动画</li>
+                        <li>可复用性&组合</li>
+                        <li>工具</li>
+                        <li>规模化</li>
+                        <li>内在</li>
+                        <li>迁移</li>
+                        <li>更多</li>
+                    </ul>
+                </aside>
+                <main class="VUE-MAIN">
+                    <ul>
+                        <li>内容Vue.js基础语法</li>
+                        <li>内容深入了解组件</li>
+                        <li>内容过渡&动画</li>
+                        <li>内容可复用性&组合</li>
+                        <li>内容工具</li>
+                        <li>内容规模化</li>
+                        <li>内容内在</li>
+                        <li>内容迁移</li>
+                        <li>内容更多</li>
+                    </ul>
+                </main>
+            </li>
+        </ul>
+    </main>
+    <script>
+        var items = document.querySelector('.resources-nav').querySelectorAll('li');
+        var itemsContent = document.querySelector('.itemsUL').children;
+        for(var i=0;i<items.length;i++){
+            items[i].addEventListener('click',function(){
+                for(var j=0;j<items.length;j++){
+                    itemsContent[j].style.display = 'none';
+                    if(this==items[j]){
+                        itemsContent[j].style.display = 'block';
+                    }                   
+                }
+            })
+        }
+    </script>
+</body>
+</html>
