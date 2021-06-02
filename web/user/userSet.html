@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人信息设置</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/user/user_infoset.css">
+</head>
+<body>
+<div class="layui-card">
+  <div class="layui-card-header">更改个人信息</div>
+  <div class="layui-card-body">
+    <form class="layui-form" action="/Layman/ValidateServlet" id="user_infoset" method="post">
+<!--      用户名-->
+      <div class="layui-form-item">
+        <label class="layui-form-label">用户名</label>
+        <div class="layui-input-block">
+          <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+
+<!--      密码框-->
+      <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-block">
+          <input type="password" name="password" required  lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">确认密码</label>
+        <div class="layui-input-block">
+          <input type="password" name="repassword" required  lay-verify="required|repwd" placeholder="请输入密码" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+<!--      验证码-->
+      <div class="layui-form-item">
+        <label class="layui-form-label">验证码</label>
+        <div class="layui-input-block">
+          <input type="text" name="code" required  lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input">
+        </div>
+        <img src="../JSP/user_infoset.jsp" border="0" id="imgValidate">
+      </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/lib/jquery.js"></script>
+<script src="../js/user/user_infoset.js"></script>
+</body>
+
+</html>

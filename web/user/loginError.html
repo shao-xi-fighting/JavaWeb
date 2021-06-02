@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/com-header-nav.css">
+  <!-- 引入登录注册js文件 -->
+  <script type="text/javascript" src="../js/register.js"></script>
+
+</head>
+<body>
+<nav class="nav-common">
+  <div class="logo-com">
+    <img src="../layman.png" alt="">
+  </div>
+  <div class="menu">
+    <span class="iconfont">&#xf316;</span>菜单栏代构建。。。
+  </div>
+</nav>
+<div class="register-box">
+  <div class="dowebok" id="dowebok">
+    <div class="form-container sign-up-container">
+      <!--注册表单-->
+      <form action="../JSP/register.jsp">
+        <h1>注册</h1>
+        <input type="text"  name="loginInUsername" placeholder="username" class="uname"><span class="remind remind-name"></span>
+        <input type="password" name="loginInPassword" placeholder="password" class="upass"><span class="remind remind-pass"></span>
+        <button type="submit">注册</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="../JSP/testlogin.jsp">
+        <h1>登录</h1>
+        <input type="text" name="loginUpUsername" placeholder="username">
+        <input type="password" name="loginUpPassword" placeholder="password">
+        <a href="###">忘记密码？</a>
+        <button type="submit">登录</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>已有帐号？</h1>
+          <p>请使用您的帐号进行登录</p>
+          <button class="ghost" id="signIn">登录</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>没有帐号？</h1>
+          <p>立即注册加入我们，和我们一起开始旅程吧</p>
+          <button class="ghost" id="signUp">注册</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ==============注册表单验证========================= -->
+  <script>
+    var uname = document.querySelector('.uname');
+    var remindName = document.querySelector('.remind-name');
+    var pass = document.querySelector('.upass');
+    var remindPass = document.querySelector('.remind-pass');
+    var rgName = /^[a-zA-Z0-9_-]{3,12}/;
+    uname.onblur = function (){
+      if(!rgName.test(uname.value)){
+        remindName.innerHTML = '用户名格式错误，长度3~12位';
+        remindName.style.color = '#ff416c'
+        return false;
+      }else {
+        remindName.innerHTML = '用户名格式正确'
+        remindName.style.color = '#00b894'
+      }
+    }
+    pass.onblur = function () {
+      if(!rgName.test(pass.value)){
+        remindPass.style.color = '#ff416c';
+        remindPass.innerHTML ='密码格式错误，长度3~12位';
+        return false;
+      }else {
+        remindPass.style.color = '#00b894';
+        remindPass.innerHTML = '密码格式正确';
+      }
+    }
+  </script>
+  <!-- ================================================================== -->
+</div>
+<div class="footer">
+  <div class="info">
+    <i class="iconfont">&#xe656;</i>copyright@layman - 成都理工大学2019级软件工程1班张果
+    <h2>本站用于javaweb课程学习</h2>
+  </div>
+</div>
+</body>
+</html>

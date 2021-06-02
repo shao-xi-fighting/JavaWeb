@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+</head>
+<style>
+  .remind {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+</style>
+<body>
+<h2 class="remind"><span id="succ"></span></h2>
+
+<script>
+
+  var layer=layui.layer
+  var succ = document.querySelector('#succ');
+  var timer = 3;
+  forward();
+  setInterval(forward,1000);
+  function forward (){
+    if(timer==0){
+      location.href = 'personalHome.html';
+    }else {
+      succ.innerHTML = timer+'秒钟后跳转到个人中心';
+      timer--;
+    }
+  }
+</script>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/lib/jquery.js"></script>
+<script src="../js/user/userInfoSetSuccess.js"></script>
+</body>
+</html>

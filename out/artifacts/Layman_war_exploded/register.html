@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/com-header-nav.css">
     <!-- 引入登录注册js文件 -->
     <script type="text/javascript" src="js/register.js"></script>
-
 </head>
 <body>
     <nav class="nav-common">
@@ -24,7 +23,7 @@
     <div class="dowebok" id="dowebok">
         <div class="form-container sign-up-container">
           <!--注册表单-->
-            <form action="register.jsp">
+            <form action="JSP/register.jsp">
                 <h1>注册</h1>
                 <input type="text"  name="loginInUsername" placeholder="username" class="uname"><span class="remind remind-name"></span>
                 <input type="password" name="loginInPassword" placeholder="password" class="upass"><span class="remind remind-pass"></span>
@@ -32,10 +31,10 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="###">
+            <form action="JSP/loginCheck.jsp">
                 <h1>登录</h1>
-                <input type="text" placeholder="username">
-                <input type="password" placeholder="password">
+                <input type="text" name="loginUpUsername" placeholder="username">
+                <input type="password" name="loginUpPassword" placeholder="password">
                 <a href="###">忘记密码？</a>
                 <button type="submit">登录</button>
             </form>
@@ -55,35 +54,6 @@
             </div>
         </div>
     </div>
-    <!-- ==============注册表单验证========================= -->
-    <script>
-        var uname = document.querySelector('.uname');
-        var remindName = document.querySelector('.remind-name');
-        var pass = document.querySelector('.upass');
-        var remindPass = document.querySelector('.remind-pass');
-        var rgName = /^[a-zA-Z0-9_-]{3,12}/;
-        uname.onblur = function (){
-            if(!rgName.test(uname.value)){
-                remindName.innerHTML = '用户名格式错误，长度3~12位';
-                remindName.style.color = '#ff416c'
-                return false;
-            }else {
-                remindName.innerHTML = '用户名格式正确'
-                remindName.style.color = '#00b894'
-            }
-        }
-        pass.onblur = function () {
-            if(!rgName.test(pass.value)){
-                remindPass.style.color = '#ff416c';
-                remindPass.innerHTML ='密码格式错误，长度3~12位';
-                return false;
-            }else {
-                remindPass.style.color = '#00b894';
-                remindPass.innerHTML = '密码格式正确';
-            }
-          }
-    </script>
-<!-- ================================================================== -->
  </div>
  <div class="footer">
     <div class="info">

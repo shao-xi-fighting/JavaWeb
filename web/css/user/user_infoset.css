@@ -1,0 +1,19 @@
+body {
+  background-color: #f2f3f5;
+  padding: 80px;
+}
+.layui-card {
+  text-align: center;
+}
+.layui-card-body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.layui-form {
+  margin: 0 auto;
+  width: 450px;
+}
+.layui-form-item input {
+
+}
